@@ -11,9 +11,8 @@ const Puppies = () => {
           width='400px'
         />
     </div>
-  );
+  )
     }
   
-};
 
 export default Puppies;
