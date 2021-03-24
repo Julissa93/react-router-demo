@@ -6,15 +6,18 @@
   "scripts": {
     "start": "npm run start-server & npm run build-watch",
     "build-watch": "webpack -w",
-    "start-server": "nodemon --watch server -e js,html server/index.js"
+    "start-server": "nodemon --watch server -e js,html server/index.js",
+    "seed": "node seed.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.2",
+    "pg": "^8.5.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-router-dom": "^4.3.1",
+    "sequelize": "^6.6.2",
     "volleyball": "^1.5.1"
   },
   "devDependencies": {
