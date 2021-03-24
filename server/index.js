@@ -11,26 +11,6 @@ app.use(volleyball);
 // Static file-serving middleware
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
-//get puppies
-app.get('/puppies', async (req, res, next) => {
-  try {
-    const puppies = await Puppy.findAll()
-    res.send(puppies)
-  } catch(err) {
-    next(err)
-  }
-})
-
-//get kittens
-app.get('/kittens', async (req, res, next) => {
-  try {
-    const kittens = await Kitten.findAll()
-    res.send(kittens)
-  } catch(err) {
-    next(err)
-  }
-})
-
 // This middleware will catch any URLs resembling a file extension
 // for example: .js, .html, .css
 // This allows for proper 404s instead of the wildcard '#<{(|' catching
